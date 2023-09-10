@@ -1,0 +1,485 @@
+﻿
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    
+}
+html{
+    
+}
+body {
+    scroll-behavior:smooth;
+    font-family:Rockwell, Arial;
+}
+
+/*---------------------------header starting-------------*/
+#header {
+    position:fixed;
+    top:0;
+    width:100%;
+    height: 60px;
+    background-color: black;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    
+   }
+.logo{
+  font-size:25px;
+  color:white;
+  padding:50px;
+  font-family:Arial;
+  font-weight:normal
+    
+}
+.navbar a {
+    color: white;
+    font-size:18px;
+    font-weight:bold;
+    text-decoration:none;
+    margin-right:30px;
+    padding:5px;
+    
+}
+    .navbar a:hover {
+      
+        color:orangered;
+      border-bottom:2px solid white;
+
+    }
+    .nav2 {
+        display:none;
+    }
+@media only screen and (max-width: 700px) {
+    .navbar {
+       display:none;
+    }
+    .nav2 {
+        display: contents;
+     }
+    .nav2 i{
+        color:white;
+        margin-right:10px;
+        width:20px;
+    }
+}
+@media only screen and (max-width: 750px){
+
+}
+/*home page*/
+#home {
+    height: 750px;
+    width: 100%;
+    text-transform: capitalize;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    background: #2f3394;
+}
+
+
+
+.container h3 {
+    font-size: 25px;
+    font-weight: 700;
+    color: orange;
+}
+.container h2 {
+    font-size: 40px;
+    font-weight: 700;
+    
+    color:white;
+}
+#home h2 span {
+    
+    font-size: 55px;
+    animation: slideright 1s ease 0s infinite normal;
+}
+
+@keyframes slideright {
+    0% {
+        transform: translateX(-100px);
+        opacity: 0;
+    }
+
+    100% {
+        transform: translateX(0px);
+        opacity: 1;
+    }
+}
+
+.container a {
+    font-size: 20px;
+    text-decoration: none;
+    color: white;
+    border:0;
+    padding: 5px 10px;
+    background-color: #EB7531;
+}
+ 
+
+
+
+   /*about section*/
+#about {
+    height: 750px;
+    width: 100%;
+    padding-top: 10px;
+    background-color: #D2D2D2;
+}
+.aboutclass {
+    margin:95px 40px;
+    border-radius: 30px;
+    background-color: white;
+}
+.aboutbox {
+    display:inline-flex;
+    justify-content:space-evenly;
+    align-items:center;
+
+   
+}
+.about-img {
+    height: 430px;
+    width:150%;
+    border-width: 5px;
+    margin: 70px;
+    border-color: black;
+    border-style: solid;
+    border-radius: 50%;
+    box-shadow: 20px 20px 20px black;
+}
+.about-text {
+    margin-right: 30px;
+}
+.about-text h1 {
+    font-size: 50px;
+    font-weight: 200;
+    color: black;
+    animation: slidebottom 1s ease 0s 5 normal;
+}
+    .about-text a {
+        font-size: 20px;
+        text-decoration: none;
+        color: white;
+        border: 0;
+        padding: 5px 10px;
+        background-color: #EB7531;
+        margin-right:20px;
+    }
+    
+
+    @keyframes slidebottom {
+        0% {
+        transform: translateY(-100px);
+        opacity: 0;
+    }
+
+    100% {
+        transform: translateY(0p);
+        opacity: 1;
+    }
+}
+
+
+.about-text h1 span {
+    color:  #2f3394;
+    
+}
+    .about-text p {
+        font-size: 20px;
+        font-weight: 400;
+    }
+
+
+
+/*-------------------------------------[    skills   ]---------------------------------*/
+
+
+
+#skill-box {
+    height: 750px;
+    width: 100%;
+    padding: 40px;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    background: #2f3394;
+}
+
+
+.icon {
+    height: 350px;
+    width: 400px;
+    border: 0;
+    border-radius: 10px 10px 50% 50%;
+    box-shadow: 0 0 10px;
+    transition: all 0.7s ease-in-out;
+    background: white;
+}
+
+.progress-bar {
+    height: 250px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 30px;
+    text-transform: capitalize;
+    margin-top: 20px;
+}
+.one {
+    margin-left: 110px;
+    margin-top: 30px;
+}
+.icon:active {
+    height: 510px;
+    width: 700px;
+    border-radius: 50px;
+}
+
+
+    .icon:active .headbar {
+        display: contents;
+    }
+            .icon:active .progress-bar div img {
+                transition: all 0.7s ease-in-out;
+                transform: translate(-250px,-100px);
+            }
+
+
+ .headbar {
+        display: none;
+        width: 600px;
+        background-color: white;
+        border-radius: 10px;
+        padding: 25px 30px;
+        box-shadow: 5px 5px 10px black;
+    }
+.headbar .bar{
+    margin:20px 0;
+}
+    .headbar .bar:first-child{
+        margin-top:0px;
+    }
+.headbar .bar .info span{
+    font-size:17px;
+    font-weight:500;
+}
+    .headbar .bar .progress-line {
+        position: relative;
+        height: 10px;
+        width: 100%;
+        background-color: #D2D2D2;
+        border-radius: 4px;
+        margin-top: 5px;
+        box-shadow: inset 0px 1px 1px rgba(0,0,0,0.05),0px 1px rgba(255,255,255,0.8);
+        animation: animate 1s cubic-bezier(1,0,0.5,1) 1s  forwards;
+        transform-origin: left;
+    }
+
+.bar .progress-line span {
+    height: 100%;
+    width: 80%;
+    background-color: black;
+    border-radius: 4px;
+    position: absolute;
+    transform-origin: left;
+    transform: scaleX(0);
+    animation: animate 1s cubic-bezier(1,0,0.5,1) 1s  forwards;
+}
+@keyframes animate {
+    0% {
+        transform: scaleX(0);
+    }
+
+    100% {
+        transform: scaleX(1);
+    }
+}
+.progress-line.html span {
+    width: 87%;
+}
+
+.progress-line.css span {
+   width: 65%;
+}
+
+.progress-line.javascript span {
+    width: 50%;
+}
+
+.progress-line.java span{
+    width: 73%;
+}
+.bar .progress-line span::before {
+    position:absolute;
+    content:"";
+    right:0;
+    top:-10px;
+    opacity:0;
+    
+}
+.bar .progress-line span::after {
+    position: absolute;
+    content: "80%";
+    right: 0;
+    top: -20px;
+    animation: showtext 1s linear 1s forwards;
+}
+@keyframes showtext {
+    0% {
+        opacity: 0;
+    }
+
+    100% {
+        opacity: 1;
+    }
+}
+
+ .progress-line.html span::after{
+     content:"87%";
+ }
+.progress-line.css span::after {
+    content: "65%";
+}
+.progress-line.javascript span::after {
+    content: "50%";
+}
+.progress-line.java span::after {
+    content: "73%";
+}
+
+
+
+                       
+
+
+
+     /*   ----------------------------------[          contact            ]---------------------------*/
+#contact {
+    height: 650px;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    background: white;
+}
+.row {
+    height: 600px;
+    width: 100%;
+   
+    display:flex;
+    justify-content:space-evenly;
+    align-content:center;
+    
+}
+
+
+.contact-left {
+    margin-top: 50px;
+}
+.contact-left p {
+    margin-top: 30px;
+    font-size: 25px;
+}
+    .contact-left p i {
+       color: #2f3394;
+        margin-right: 15px;
+        font-size: 25px;
+    }
+
+.social-icon a {
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    height: 40px;
+    width: 35px;
+    background: #2f3394;
+    color: white;
+    border:0;
+    border-radius: 50%;
+    box-shadow: 5px 5px 5px black;
+    padding: 20px;
+    margin-top: 40px;
+    margin-right: 15px;
+    font-size: 30px;
+    text-decoration: none;
+    transition: transform 0.5s;
+}
+.social-icon a:hover {
+    transform:translateY(-10px);
+        box-shadow: 5px 5px 5px black;
+
+
+}
+
+.title {
+    font-size: 70px;
+    text-transform: capitalize;
+    color:BLACK ;
+}
+
+.contact-right {
+    margin-top: 50px;
+    height: 400px;
+    width: 30%;
+   border-radius: 10px;
+    box-shadow: 0 0 10px;
+    
+    background: white;
+}
+form input, form textarea {
+    width: 90%;
+    border: 0;
+    outline: none;
+    background-color: #D2D2D2;
+    padding: 15px;
+    margin: 15px;
+    color: black;
+    font-size: 18px;
+    border-radius: 6px;
+}
+form p {
+    font-size: 25px;
+    color:black;
+}
+
+button {
+    background: #2f3394;
+    border: 0;
+    border-radius: 6px;
+    font-size: 20px;
+    color: white;
+    padding: 10px 30px;
+    text-transform: capitalize;
+    margin: 20px 0 0 15px;
+}
+   
+.copyright {
+    height:35px;
+    text-align: center;
+    color: white;
+    background: #2f3394;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+    
+
+
+
+
+
+
+
+
+  
